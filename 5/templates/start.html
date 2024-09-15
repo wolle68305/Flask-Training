@@ -1,0 +1,13 @@
+<!-- erbt alles aus der Datei "main.html" -->
+{% extends "layouts/main.html" %}
+
+<!-- Inhaltsblock mit dem Namen content definiert -->
+{% block content %}
+    <!-- der Parameter "name" muss genauso heißen, wie der Parametername in der run.py Datei in der Return Funktion -->
+    <h2>Mein Name ist {{ name }}</h2>
+
+    <!-- Parameter items beinhaltet eine Liste mit Werten, diese Werte werden durch eine For Schleife ausgegegben -->
+    {% for item in items %}
+        <p>{{ item }}</p>
+    {% endfor %}
+{% endblock %}
